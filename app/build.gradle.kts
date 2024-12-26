@@ -9,10 +9,11 @@ android {
 
     defaultConfig {
         applicationId = "com.fadhil.news"
-        minSdk = 24
+        minSdk = 28
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
+        vectorDrawables.useSupportLibrary = true
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -44,11 +45,15 @@ dependencies {
     //Interceptor
     implementation ("com.squareup.okhttp3:logging-interceptor:4.9.0")
 
+    //Picasso
+    implementation ("com.squareup.picasso:picasso:2.8")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.car.ui.lib)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
